@@ -11,10 +11,9 @@ class _MainMenuPageState extends State<MainMenuPage> {
   int _selectedIndex = 0;
   // ignore: prefer_final_fields
   List<Widget> _widgetOptions = <Widget>[
-    // const HomePage(),
-    // const DiscussionPage(),
-    // const MaterialPage(),
-    // const LeaderPage(),
+    const HomePage(),
+    const DiscussionPage(),
+    const MaterialsPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -39,7 +38,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFF52734D),
+        selectedItemColor: const Color(0xFFB87333),
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
@@ -47,16 +46,12 @@ class _MainMenuPageState extends State<MainMenuPage> {
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calculate),
+            icon: Icon(Icons.podcasts),
             label: "Discussion",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.food_bank),
-            label: "Material",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month),
-            label: "Leader",
+            icon: Icon(Icons.article),
+            label: "Materials",
           ),
         ],
         currentIndex: _selectedIndex,

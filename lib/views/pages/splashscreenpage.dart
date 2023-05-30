@@ -30,8 +30,8 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
           MaterialPageRoute(builder: ((context) => const MainMenuPage())));
       toastUi.toastOk("Welcome back, ${user?.name.toString()}");
     } else {
-      // Navigator.pushReplacement(context,
-      //     MaterialPageRoute(builder: ((context) => const LoginPage())));
+      Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: ((context) => const LoginPage())));
       toastUi.toastOk("Not logged in, please log in");
     }
   }

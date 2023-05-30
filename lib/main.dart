@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           title: 'CG',
           theme: ThemeData(
-            scaffoldBackgroundColor: const Color(0xFFFEFFDE),
+            scaffoldBackgroundColor: const Color.fromARGB(255, 255, 245, 235),
           ),
           debugShowCheckedModeBanner: false,
           home: const Splash()),

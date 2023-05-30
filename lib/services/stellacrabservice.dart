@@ -10,7 +10,7 @@ class StellacrabService {
       String birthdate,
       String phone,
       String role) async {
-    var response = await http.post(Uri.https(Const.stellacrabUrl, "/api/user"),
+    var response = await http.post(Uri.https(Const.stellacrabUrl, "index.php/api/user"),
         headers: <String, String>{
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -34,7 +34,7 @@ class StellacrabService {
     };
 
     var response = await http.get(
-      Uri.https(Const.stellacrabUrl, "/api/user", queryParams),
+      Uri.https(Const.stellacrabUrl, "index.php/api/user", queryParams),
       headers: <String, String>{
         'Content-Type': 'application/x-www-form-urlencoded',
       },
@@ -45,7 +45,7 @@ class StellacrabService {
 
   static Future<http.Response> login(String email, String password) async {
     var response = await http.post(
-        Uri.https(Const.stellacrabUrl, "/api/user/login"),
+        Uri.https(Const.stellacrabUrl, "index.php/api/user/login"),
         headers: <String, String>{
           'Content-Type': 'application/x-www-form-urlencoded',
         },

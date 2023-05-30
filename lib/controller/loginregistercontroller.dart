@@ -38,12 +38,12 @@ class LoginRegisterController {
     }
   }
 
-  // static void navigateToMainMenu(BuildContext context, User user) {
-  //   Navigator.pushAndRemoveUntil<dynamic>(
-  //       context,
-  //       MaterialPageRoute<dynamic>(builder: (context) => const MainMenuPage()),
-  //       (route) => false);
-  // }
+  static void navigateToMainMenu(BuildContext context, User user) {
+    Navigator.pushAndRemoveUntil<dynamic>(
+        context,
+        MaterialPageRoute<dynamic>(builder: (context) => const MainMenuPage()),
+        (route) => false);
+  }
 
   static Future<User> getUserById(String id) async {
     var response = await StellacrabService.getUserById(id);
