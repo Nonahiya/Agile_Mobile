@@ -8,3 +8,4 @@ import 'package:flutter/material.dart';
 import '../models/models.dart';
 
 part 'loginregistercontroller.dart';
+part 'usercontroller.dart';

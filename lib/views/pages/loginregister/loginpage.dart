@@ -31,10 +31,10 @@ class _LoginPageState extends State<LoginPage> {
     if (user.id != "0") {
       BlocProvider.of<UserCubit>(context).login(user);
       SharedPrefs.update(user.id!);
-      toastUi.toastOk('Logged in successfully!');
+      ToastUi.toastOk('Logged in successfully!');
       LoginRegisterController.navigateToMainMenu(context, user);
     } else {
-      toastUi.toastErr(user.name!);
+      ToastUi.toastErr(user.name!);
     }
   }
 

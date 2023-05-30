@@ -1,9 +1,9 @@
 part of 'widgets.dart';
 
-class toastUi {
+class ToastUi {
   BuildContext? context;
 
-  toastUi(BuildContext ctx) {
+  ToastUi(BuildContext ctx) {
     context = ctx;
   }
 

@@ -56,4 +56,28 @@ class StellacrabService {
 
     return response;
   }
+
+  static Future<List<User>> getUser() async {
+
+    var response = await http.get(
+      Uri.https(Const.stellacrabUrl, "index.php/api/user"),
+      headers: <String, String>{
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    );
+
+    Map<String, dynamic> job = json.decode(response.body);
+    print(job);
+    List<User> result = [];
+    if (response.statusCode == 200 && job['error'] == null) {
+      if (job['user'] != null) {
+        result = (job['user'] as List)
+            .map((e) => User.fromMap(e))
+            .toList();
+      }
+    }
+    print(result);
+
+    return result;
+  }
 }

@@ -12,6 +12,7 @@ class _MainMenuPageState extends State<MainMenuPage> {
   // ignore: prefer_final_fields
   List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
+    const LeaderPanelPage(),
     const DiscussionPage(),
     const MaterialsPage(),
   ];
@@ -29,34 +30,54 @@ class _MainMenuPageState extends State<MainMenuPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Center(
-            child: _widgetOptions.elementAt(_selectedIndex),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFFB87333),
-        unselectedItemColor: Colors.grey,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.podcasts),
-            label: "Discussion",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.article),
-            label: "Materials",
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
-    );
+    return BlocBuilder<UserCubit, User?>(builder: (context, state) {
+      return Scaffold(
+        body: Stack(
+          children: [
+            Center(
+              child: _widgetOptions.elementAt(_selectedIndex),
+            ),
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: const Color(0xFFB87333),
+          unselectedItemColor: Colors.grey,
+          items: state?.role == "Leader" ? const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.admin_panel_settings),
+              label: "Leader Panel",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.podcasts),
+              label: "Discussion",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.article),
+              label: "Materials",
+            ),
+          ]
+          : const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.podcasts),
+              label: "Discussion",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.article),
+              label: "Materials",
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
+      );
+    });
   }
 }
