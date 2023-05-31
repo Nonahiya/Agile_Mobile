@@ -164,8 +164,9 @@ class _LoginPageState extends State<LoginPage> {
                   width: double.infinity,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          shape: const StadiumBorder(),
-                          backgroundColor: const Color(0xFFB87333),),
+                        shape: const StadiumBorder(),
+                        backgroundColor: const Color(0xFFB87333),
+                      ),
                       onPressed: () {
                         if (_loginKey.currentState!.validate()) {
                           register(ctrlEmail.text, ctrlPass.text);

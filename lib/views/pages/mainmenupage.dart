@@ -42,38 +42,39 @@ class _MainMenuPageState extends State<MainMenuPage> {
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: const Color(0xFFB87333),
           unselectedItemColor: Colors.grey,
-          items: state?.role == "Leader" ? const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.admin_panel_settings),
-              label: "Leader Panel",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.podcasts),
-              label: "Discussion",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.article),
-              label: "Materials",
-            ),
-          ]
-          : const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.podcasts),
-              label: "Discussion",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.article),
-              label: "Materials",
-            ),
-          ],
+          items: state?.role == "Leader"
+              ? const [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.home),
+                    label: "Home",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.admin_panel_settings),
+                    label: "Leader Panel",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.podcasts),
+                    label: "Discussion",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.article),
+                    label: "Materials",
+                  ),
+                ]
+              : const [
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.home),
+                    label: "Home",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.podcasts),
+                    label: "Discussion",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.article),
+                    label: "Materials",
+                  ),
+                ],
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
         ),

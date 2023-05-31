@@ -46,8 +46,8 @@ class _LeaderPanelPageState extends State<LeaderPanelPage> {
                   children: [
                     DataTable(
                       columnSpacing: 15,
-                      headingRowColor:
-                          MaterialStateProperty.all(const Color.fromARGB(255, 220, 175, 133)),
+                      headingRowColor: MaterialStateProperty.all(
+                          const Color.fromARGB(255, 220, 175, 133)),
                       decoration: const BoxDecoration(
                         border: Border(
                           right: BorderSide(
@@ -73,8 +73,8 @@ class _LeaderPanelPageState extends State<LeaderPanelPage> {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: DataTable(
-                          headingRowColor:
-                              MaterialStateProperty.all(const Color.fromARGB(255, 220, 175, 133)),
+                          headingRowColor: MaterialStateProperty.all(
+                              const Color.fromARGB(255, 220, 175, 133)),
                           columnSpacing: 50,
                           decoration: const BoxDecoration(
                             border: Border(

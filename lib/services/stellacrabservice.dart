@@ -1,6 +1,8 @@
 part of 'services.dart';
 
 class StellacrabService {
+
+  // User
   static Future<http.Response> register(
       String name,
       String email,
@@ -10,8 +12,7 @@ class StellacrabService {
       String birthdate,
       String phone,
       String role) async {
-    var response = await http.post(
-        Uri.https(Const.stellacrabUrl, "index.php/api/user"),
+    var response = await http.post(Uri.https(Const.stellacrabUrl, "index.php/api/user"),
         headers: <String, String>{
           'Content-Type': 'application/x-www-form-urlencoded',
         },
@@ -59,6 +60,7 @@ class StellacrabService {
   }
 
   static Future<List<User>> getUser() async {
+
     var response = await http.get(
       Uri.https(Const.stellacrabUrl, "index.php/api/user"),
       headers: <String, String>{
@@ -71,11 +73,38 @@ class StellacrabService {
     List<User> result = [];
     if (response.statusCode == 200 && job['error'] == null) {
       if (job['user'] != null) {
-        result = (job['user'] as List).map((e) => User.fromMap(e)).toList();
+        result = (job['user'] as List)
+            .map((e) => User.fromMap(e))
+            .toList();
       }
     }
     print(result);
 
     return result;
   }
+
+  // Discussion
+  // static Future<List<User>> getUser() async {
+
+  //   var response = await http.get(
+  //     Uri.https(Const.stellacrabUrl, "index.php/api/user"),
+  //     headers: <String, String>{
+  //       'Content-Type': 'application/x-www-form-urlencoded',
+  //     },
+  //   );
+
+  //   Map<String, dynamic> job = json.decode(response.body);
+  //   print(job);
+  //   List<User> result = [];
+  //   if (response.statusCode == 200 && job['error'] == null) {
+  //     if (job['user'] != null) {
+  //       result = (job['user'] as List)
+  //           .map((e) => User.fromMap(e))
+  //           .toList();
+  //     }
+  //   }
+  //   print(result);
+
+  //   return result;
+  // }
 }
