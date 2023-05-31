@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   late User user;
-  void register(String email, String password) async {
+  void login(String email, String password) async {
     await LoginRegisterController.login(email, password).then((value) {
       setState(() {
         user = value;
@@ -169,7 +169,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       onPressed: () {
                         if (_loginKey.currentState!.validate()) {
-                          register(ctrlEmail.text, ctrlPass.text);
+                          login(ctrlEmail.text, ctrlPass.text);
                         } else {
                           showDialog(
                             context: context,
@@ -201,11 +201,11 @@ class _LoginPageState extends State<LoginPage> {
                     const Text("Don't have an account?"),
                     TextButton(
                         onPressed: () {
-                          // Navigator.pushAndRemoveUntil<dynamic>(
-                          //     context,
-                          //     MaterialPageRoute<dynamic>(
-                          //         builder: (context) => const RegisterPage()),
-                          //     (route) => false);
+                          Navigator.pushAndRemoveUntil<dynamic>(
+                              context,
+                              MaterialPageRoute<dynamic>(
+                                  builder: (context) => const RegisterPage()),
+                              (route) => false);
                         },
                         child: const Text("Register",
                             style: TextStyle(

@@ -12,9 +12,9 @@ class _MainMenuPageState extends State<MainMenuPage> {
   // ignore: prefer_final_fields
   List<Widget> _widgetOptions = <Widget>[
     const HomePage(),
-    const LeaderPanelPage(),
     const DiscussionPage(),
     const MaterialsPage(),
+    const LeaderPanelPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -49,16 +49,16 @@ class _MainMenuPageState extends State<MainMenuPage> {
                     label: "Home",
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.admin_panel_settings),
-                    label: "Leader Panel",
-                  ),
-                  BottomNavigationBarItem(
                     icon: Icon(Icons.podcasts),
                     label: "Discussion",
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.article),
                     label: "Materials",
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.admin_panel_settings),
+                    label: "Leader Panel",
                   ),
                 ]
               : const [

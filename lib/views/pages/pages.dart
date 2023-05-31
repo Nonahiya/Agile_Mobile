@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cg/views/widgets/widgets.dart';
 
@@ -17,3 +18,4 @@ part 'main/home/homepage.dart';
 part 'main/materials/materialspage.dart';
 part 'main/leaderpanel/leaderpanelpage.dart';
 part 'loginregister/loginpage.dart';
+part 'loginregister/registerpage.dart';
