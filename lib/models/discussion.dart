@@ -28,10 +28,10 @@ class Discussion extends Equatable {
         leaderId: data['leader_id'] as String?,
         title: data['title'] as String?,
         description: data['description'] as String?,
-        zoomLink: data['zoom_link '] as String?,
-        date: data['date '] as String?,
-        createdAt: data['created_at '] as String?,
-        updatedAt: data['updated_at '] as String?,
+        zoomLink: data['zoom_link'] as String?,
+        date: data['date'] as String?,
+        createdAt: data['created_at'] as String?,
+        updatedAt: data['updated_at'] as String?,
       );
 
   Map<String, dynamic> toMap() => {
@@ -39,10 +39,10 @@ class Discussion extends Equatable {
         'leader_id': leaderId,
         'title': title,
         'description': description,
-        'zoom_link ': zoomLink,
-        'date ': date,
-        'created_at ': createdAt,
-        'updated_at ': updatedAt,
+        'zoom_link': zoomLink,
+        'date': date,
+        'created_at': createdAt,
+        'updated_at': updatedAt,
       };
 
   /// `dart:convert`
