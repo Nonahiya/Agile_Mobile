@@ -16,4 +16,9 @@ class DiscussionController {
       return Discussion(id: '0', title: job['error']);
     }
   }
+
+  static Future<dynamic> get() async {
+    List<Discussion> discussionList = await StellacrabService.getDiscussion();
+    return discussionList;
+  }
 }

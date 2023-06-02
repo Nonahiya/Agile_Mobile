@@ -1,8 +1,10 @@
 import 'dart:async';
+import 'package:cg/models/discussion.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
+import 'package:lazy_loading_list/lazy_loading_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cg/views/widgets/widgets.dart';
 
