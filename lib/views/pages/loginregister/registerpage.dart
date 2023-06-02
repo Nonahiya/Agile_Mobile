@@ -382,6 +382,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   const SizedBox(height: 16),
                   TextFormField(
                     cursorColor: const Color(0xFFB87333),
+                    keyboardType: TextInputType.number,
                     decoration: const InputDecoration(
                       labelText: "Phone",
                       labelStyle: TextStyle(color: Colors.black),

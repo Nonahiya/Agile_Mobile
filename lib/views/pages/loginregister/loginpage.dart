@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: const InputDecoration(
                     labelText: "Email",
                     labelStyle: TextStyle(color: Colors.black),
-                    prefixIcon: Icon(Icons.email, color: Colors.black),
+                    icon: Icon(Icons.email, color: Color(0xFFB87333)),
                     filled: true,
                     fillColor: Colors.white,
                     focusedBorder: OutlineInputBorder(
@@ -125,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                           color: Colors.black),
                     ),
                     labelStyle: const TextStyle(color: Colors.black),
-                    prefixIcon: const Icon(Icons.lock, color: Colors.black),
+                      icon: const Icon(Icons.lock, color: Color(0xFFB87333)),
                     filled: true,
                     fillColor: Colors.white,
                     focusedBorder: const OutlineInputBorder(
