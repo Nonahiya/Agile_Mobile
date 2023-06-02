@@ -9,3 +9,4 @@ import '../models/models.dart';
 
 part 'loginregistercontroller.dart';
 part 'usercontroller.dart';
+part 'materialscontroller.dart';
