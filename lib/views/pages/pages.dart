@@ -14,6 +14,7 @@ import '../../shared/shared.dart';
 part 'splashscreenpage.dart';
 part 'mainmenupage.dart';
 part 'main/discussion/discussionpage.dart';
+part 'main/discussion/discussionformpage.dart';
 part 'main/home/homepage.dart';
 part 'main/materials/materialspage.dart';
 part 'main/leaderpanel/leaderpanelpage.dart';
