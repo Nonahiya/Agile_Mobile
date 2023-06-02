@@ -1,7 +1,6 @@
 part of 'controller.dart';
 
 class DiscussionController {
-  // Bagian Vanness (API Create)
   static Future<Discussion> create(String leaderId, String title,
       String description, String zoomLink, String date) async {
     var response = await StellacrabService.createDiscussion(
