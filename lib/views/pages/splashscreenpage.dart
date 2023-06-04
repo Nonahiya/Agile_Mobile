@@ -9,7 +9,6 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> with TickerProviderStateMixin {
   final splashDelay = 4;
-  AnimationController? _controller;
 
   User? user;
 
