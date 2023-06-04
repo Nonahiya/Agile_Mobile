@@ -10,6 +10,7 @@ import 'package:cg/views/widgets/widgets.dart';
 
 import '../../auth/auth.dart';
 import '../../controller/controller.dart';
+import '../../models/materials.dart';
 import '../../models/models.dart';
 import '../../shared/shared.dart';
 
