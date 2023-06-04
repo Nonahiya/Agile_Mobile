@@ -22,3 +22,4 @@ part 'main/materials/materialspage.dart';
 part 'main/leaderpanel/leaderpanelpage.dart';
 part 'loginregister/loginpage.dart';
 part 'loginregister/registerpage.dart';
+part 'main/materials/materialsformpage.dart';

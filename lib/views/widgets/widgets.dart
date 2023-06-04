@@ -9,3 +9,4 @@ import 'package:fluttertoast/fluttertoast.dart';
 part 'toastui.dart';
 part 'loadingui.dart';
 part 'discussioncard.dart';
+part 'materialscard.dart';
