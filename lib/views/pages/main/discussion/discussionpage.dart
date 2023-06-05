@@ -17,6 +17,10 @@ class _DiscussionPageState extends State<DiscussionPage> {
         await DiscussionController.get().then((value) {
           setState(() {
             discussionList = value;
+
+            discussionList.sort((b, a) => a.date!
+                      .toString()
+                      .compareTo(b.date!.toString()));
           });
           print(discussionList);
         });

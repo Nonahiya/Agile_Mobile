@@ -7,7 +7,7 @@ class LoadingUi {
         width: double.infinity,
         height: double.infinity,
         color: Colors.transparent,
-        child: const SpinKitFadingCircle(size: 50, color: Color(0xFF004422)));
+        child: const SpinKitFadingCircle(size: 50, color: Color(0xFFB87333)));
   }
 
   static Container loadingBlock() {
@@ -16,7 +16,7 @@ class LoadingUi {
         width: double.infinity,
         height: double.infinity,
         color: Colors.black26,
-        child: const SpinKitFadingCircle(size: 50, color: Color(0xFF004422)));
+        child: const SpinKitFadingCircle(size: 50, color: Color(0xFFB87333)));
   }
 
   static Container loadingDD() {
@@ -25,6 +25,6 @@ class LoadingUi {
         width: 30,
         height: 30,
         color: Colors.transparent,
-        child: const SpinKitFadingCircle(size: 30, color: Color(0xFF004422)));
+        child: const SpinKitFadingCircle(size: 30, color: Color(0xFFB87333)));
   }
 }
