@@ -204,7 +204,7 @@ class _DiscussionFormPageState extends State<DiscussionFormPage> {
                               return Theme(
                                 data: Theme.of(context).copyWith(
                                   colorScheme: const ColorScheme.light(
-                                    primary: Color(0XFF52734D),
+                                    primary: Color(0xFFB87333),
                                     onPrimary: Colors.white,
                                     onSurface: Colors.black,
                                   ),
@@ -229,7 +229,7 @@ class _DiscussionFormPageState extends State<DiscussionFormPage> {
                                 return Theme(
                                   data: Theme.of(context).copyWith(
                                     colorScheme: const ColorScheme.light(
-                                      primary: Color(0XFF52734D),
+                                      primary: Color(0xFFB87333),
                                       onPrimary: Colors.white,
                                       onSurface: Colors.black,
                                     ),

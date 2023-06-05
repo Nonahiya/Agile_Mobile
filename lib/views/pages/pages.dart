@@ -10,6 +10,7 @@ import 'package:cg/views/widgets/widgets.dart';
 
 import '../../auth/auth.dart';
 import '../../controller/controller.dart';
+import '../../models/materials.dart';
 import '../../models/models.dart';
 import '../../shared/shared.dart';
 
@@ -22,3 +23,4 @@ part 'main/materials/materialspage.dart';
 part 'main/leaderpanel/leaderpanelpage.dart';
 part 'loginregister/loginpage.dart';
 part 'loginregister/registerpage.dart';
+part 'main/materials/materialsformpage.dart';
